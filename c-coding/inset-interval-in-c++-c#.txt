@@ -1,0 +1,41 @@
+ public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+        
+        int i;
+        for(i = 0; i < intervals.size(); i++) {
+            Interval curr = intervals.get(i);
+            
+            if (curr.end < newInterval.start) continue; //nonoverlap, newInterval is behind current, continue;
+            
+            if(newInterval.end < curr.start) break; //nonoverlap, newInterval is before current, jump out of loop
+            
+            newInterval.start = Math.min(curr.start, newInterval.start); //overlap, update newInterval and remove current
+            newInterval.end = Math.max(curr.end, newInterval.end);
+            intervals.remove(i);
+            i--;
+        }
+        intervals.add(i, newInterval);
+        return intervals;
+        
+ }﻿
+ 
+ -----------------------------------------------------------------------------------------------------
+     vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
+        vector<Interval>::iterator it=intervals.begin();
+        int overlap = 0;
+        while(it!=intervals.end()) {
+            if(newInterval.start > it->end) {}   // before newInterval, no overlap
+            else if(newInterval.end < it->start)  // after newInterval, no overlap
+                break;
+            else {  // overlap
+                newInterval.start = std::min(newInterval.start,it->start);
+                newInterval.end   = std::max(newInterval.end,it->end);
+                overlap++;
+            }
+            it++;
+        }
+        
+        if(overlap!=0)
+            it = intervals.erase(it-overlap,it);
+        intervals.insert(it,newInterval);
+        return intervals;
+    }﻿

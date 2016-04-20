@@ -1,0 +1,18 @@
+# works for Visual C++ V6 and nmake
+
+PROGS = bin.exe ext.exe has.exe ins.exe qui.exe quilist.exe\
+	qsort.exe rbt.exe skl.exe shl.exe btr.exe rbtr.exe
+
+all: $(PROGS)
+
+rbtr.exe: rbtr.obj rbtrmain.obj
+	cl -GX -nologo -ML -W3 -GX -O2 -DNDEBUG rbtr.obj rbtrmain.obj
+
+.c.obj:
+	cl -c -GX -nologo -ML -W3 -GX -O2 -DNDEBUG $<
+
+.c.exe:
+	cl -GX -nologo -ML -W3 -GX -O2 -DNDEBUG $<
+
+clean:
+        rm -f $(PROGS) *.obj
