@@ -9,7 +9,19 @@
 
 int main(int argc, char* argv[]){
 
-	printf("This is test main func\n");
+	int a=5, b=16;
+	int x = 5,y=10;
+	printf("a = %d, b=%d\n",a,b);
+
+
+	x = x + y;  // x now becomes 15
+	y = x - y;  // y becomes 10
+	x = x - y;  // x becomes 5
+
+	 a += b - (b += a);
+
+	printf("a = %d, b=%d\n",a,b);
+
 	
 	return 0;
 }
