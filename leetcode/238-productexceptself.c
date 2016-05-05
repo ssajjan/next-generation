@@ -6,6 +6,7 @@
 
 #define MIN(a,b)  (a)<(b)?(a):(b)
 #define MAX(a,b)  (a)>(b)?(a):(b)
+#define SIZE 5
 
 int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
 
@@ -37,18 +38,18 @@ int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
 int main(int argc, char* argv[]){
 
 
-	int nums[4]= {2,3,7,1};
+	int nums[SIZE]= {2,3,5,7,4};
 	int returnSize , i;
 
-	int *resultnums = productExceptSelf(nums,4, &returnSize);
+	int *resultnums = productExceptSelf(nums,SIZE, &returnSize);
 	
 	printf("nums = ");
-	for(i=0;i<4;i++){
+	for(i=0;i<SIZE;i++){
 		printf("%d ",nums[i]);	
 	}
 	printf("\nresultnums = ");
 	
-	for(i=0;i<4;i++){
+	for(i=0;i<returnSize;i++){
 		printf("%d ",resultnums[i]);	
 	} 
 	printf("\n");

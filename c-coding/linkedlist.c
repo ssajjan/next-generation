@@ -3,9 +3,9 @@
 #include<stdbool.h>
 
 struct Interval{
-    int start;
+	int start;
 	int end;
-    struct Interval *next;
+	struct Interval *next;
 };
 
 struct Interval *head = NULL;
