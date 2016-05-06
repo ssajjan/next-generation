@@ -1,0 +1,23 @@
+void dfs(bool * visited, GraphNode root){
+  Edge currEdge = *root.adjacents;
+  GraphNode currNode;
+
+  visited[root.name] = true;
+
+  while(currEdge.next){
+    currNode = *currEdge.data;
+    if(!visited[currNode.name])
+      dfs(visited, graph, currNode);
+
+    currEdge = *currEdge.next;
+  }  
+
+}
+
+void hasRoute(GraphNode * graph, int from, int to){
+  bool visited[graph->numOfNodes];
+
+  dfs(visited, graph[from]);
+
+  return visited[to];
+}

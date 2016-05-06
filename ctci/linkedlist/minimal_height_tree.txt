@@ -1,0 +1,31 @@
+class MinimalHeightSearchTree
+  Node = Struct.new(:data, :left, :right)
+  def initialize *args
+    @length = args.length
+    @head = build_tree_from_nums args 
+  end
+  private
+  def to_s
+    tab = @length/2
+    queue = []
+    result = ""
+    queue << @head
+    until queue.empty? 
+      result << "\t"*tab
+      curr = queue.unshift
+      result << "#{ curr.data }\n"
+      result << "#{curr.left}      #{curr.right} "
+      tab-=1
+    end
+  end
+  def build_tree_from_nums nums, first=0, last=nums.length
+    center = (first + last)/2
+    unless center == first
+      root.left = build_tree_from_nums nums, first, center
+      root.right = build_tree_from_nums nums, center, last
+    end
+    root = nums[center]
+  end
+end
+
+myTree = MinimalHeightSearchTree.new 1, 3, 5, 6, 7, 8, 9, 11
