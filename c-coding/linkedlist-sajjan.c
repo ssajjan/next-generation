@@ -1,6 +1,7 @@
 #include<stdio.h> //printf, scanf
 #include<stdlib.h> //malloc
 #include<time.h>
+#include<stdint.h>
 
 typedef struct LinkListNode{
 	int data;
@@ -108,7 +109,7 @@ void print_lints(Node_t *head){
 	
 	printf("List: ");
 	while(head){
-		printf("[0x%X]%4d -->",head, head->data);
+		printf("[0x%X]%4d -->",(unsigned int)head, head->data);
 		head = head->next;
 	}
 	printf("NULL\n");

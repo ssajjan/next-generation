@@ -39,7 +39,7 @@ bool isUnique(char *str){
             mask[str[index]/8] |= 1<<(str[index]%8);
     }
 
-    for (int index = 0; index<32; index++) {
+    for (index = 0; index<32; index++) {
         printf("%d,%c|",mask[index],mask[index]);
     }
     printf("\n");

@@ -36,7 +36,8 @@ struct Interval* insert_list(int start, int end,int i){
 
 int main(void){
 	
-	create_list(1,3)
+	create_list(1,3);
+	int x =-1;
 	while(x != 4){
 		printf ("\nEnter\n1-->Add intervel\n2-->Remove intervel\n3-->Print Intervel list\n4 -->Exit\ninput:");
 		scanf ("%d",&x);

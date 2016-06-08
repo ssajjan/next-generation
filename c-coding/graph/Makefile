@@ -1,6 +1,6 @@
 # unix Makefile
 
-PROGS = binary_search linkedlist-sajjan
+PROGS = graph
 
 #assertion binary_search  bubble-sort_binary-search  gets  malloc  printf  strcpy \
 	assertion-improved  bit  example  is_big_endia  linkedlistexample  namechange  replace-string  struct-size \
@@ -13,13 +13,11 @@ else
     EXES = $(PROGS)
 endif
 
-OBJS = rbtr.o rbtrmain.o
+INCLUDES = -I./
 
 CFLAGS = -Wall -O2 -std=c99 -Wimplicit-function-declaration -Wpointer-to-int-cast -Wunused-result
-
+CFLAGS += $(INCLUDES)
 all: $(PROGS)
 
-rbtr: $(OBJS)
-
 clean:
-	rm -f $(EXES) $(OBJS)
+	rm -f $(EXES)

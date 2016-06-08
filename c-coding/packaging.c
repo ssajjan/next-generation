@@ -1,12 +1,11 @@
 #include<stdio.h>
 
+typedef  struct node {
+      int data;
+      struct node *link;
+}Node;
+
 int main() {
-
-  typedef  struct node {
-         int data;
-         struct node *link;
-     }Node;
-
 /*     struct node *p, *q;
      p = (struct node *) malloc(sizeof(struct node));
      q = (struct node *) malloc(sizeof(struct node));
@@ -16,7 +15,7 @@ int main() {
 	free(q);
 */
 
-struct node p;// = (3, ((Node *)NULL));
+Node p;// = (3, ((Node *)NULL));
 struct node q = {4, &p};
 
 printf("%zu, %zu\n", sizeof(p), sizeof(q));
