@@ -10,6 +10,14 @@ typedef struct tree {
 }Node_t;
 
 
+void print_preorder(Node_t *node){
+	if(node){
+		printf("%d ",node->data);
+		print_preorder(node->left);
+		print_preorder(node->right);
+	}	
+}
+
 void print_inorder(Node_t *node){
 	if(node){
 		print_inorder(node->left);
@@ -18,6 +26,17 @@ void print_inorder(Node_t *node){
 	}	
 }
 
+void print_postorder(Node_t *node){
+	if(node){
+		print_postorder(node->left);
+		print_postorder(node->right);
+		printf("%d ",node->data);
+	}	
+}
+
+void print_levelorder(Node_t * head){
+	return;
+}
  
 Node_t* createNode(int data){
 	Node_t *temp = (Node_t *)malloc(sizeof(Node_t));

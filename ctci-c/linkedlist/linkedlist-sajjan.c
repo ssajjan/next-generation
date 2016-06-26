@@ -115,18 +115,31 @@ void insert_sorted_order(Node_t **head, int newData){
 //Adding Linked list:x1
 
 
+Node_t* getMiddleElement(Node_t *head){
+	Node_t *fast = head;
+	Node_t *slow = head;
 
+	while(fast != NULL && fast->next !=NULL){
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return slow;
+}
 
 int main(int argc, char** argv){
 	Node_t *list1 = NULL, *list2=NULL;
 	Build_list(&list1,5);
 	print_list(list1);
 
+	printf("\n Middle node \n");
+	print_list(getMiddleElement(list1));	
+	
 	Node_t *topNode = Pop(&list1);
 	printf("\n poped list1 list \n");
 	print_list(list1);
 	print_list(topNode);
 	
+
 	printf("\n removal of nodes \n");
 	reverseList(&list1);print_list(list1);
 	Node_t *removedNode = RemoveNode_notemp(&list1,3);
@@ -150,6 +163,8 @@ int main(int argc, char** argv){
 	insert_sorted_order(&list1, 9);
 	print_list(list1);
 
+	printf("\n Middle node \n");
+	print_list(getMiddleElement(list1));	
 	getchar();
 
 	return 0;

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{06AE3E69-14FB-4733-B285-5235C4332B4B}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BackTracking.cpp" />
+    <ClCompile Include="BinarySearchTree.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
+    <ClCompile Include="Delete_Node.cpp" />
+    <ClCompile Include="DynamicProgramming.cpp" />
+    <ClCompile Include="Find_Duplicates.cpp">
+      <FunctionLevelLinking Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</FunctionLevelLinking>
+    </ClCompile>
+    <ClCompile Include="GeneralAlgorithms.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Greedy_Algorithms.cpp" />
+    <ClCompile Include="Heap.cpp" />
+    <ClCompile Include="HelperMethod.cpp" />
+    <ClCompile Include="HelperMethod.h" />
+    <ClCompile Include="InfixToPostfix.cpp" />
+    <ClCompile Include="Inflight_Entertainment.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LongestConsecutivePath.cpp" />
+    <ClCompile Include="Match_Parenthesis.cpp" />
+    <ClCompile Include="Maximum_All_Subarray_Sizek.cpp" />
+    <ClCompile Include="Misc.cpp" />
+    <ClCompile Include="Next_Greater_Elements.cpp" />
+    <ClCompile Include="Prime.cpp" />
+    <ClCompile Include="Prime2.cpp" />
+    <ClCompile Include="Life_Universe_And_Everything.cpp" />
+    <ClCompile Include="Basic_Data_Structures.cpp" />
+    <ClCompile Include="Cake_Thief.cpp" />
+    <ClCompile Include="Princess_Farida_DP.cpp" />
+    <ClCompile Include="PrintAllStringPermutation.cpp" />
+    <ClCompile Include="Rand5_To_Rand7.cpp" />
+    <ClCompile Include="Merging_Ranges.cpp" />
+    <ClCompile Include="Product_of_Other_Numbers.cpp" />
+    <ClCompile Include="Recursion_DP_Cracking_CI.cpp" />
+    <ClCompile Include="Reverse_Linkedlist.cpp" />
+    <ClCompile Include="Rotation_Point.cpp" />
+    <ClCompile Include="Search_And_Sort.cpp" />
+    <ClCompile Include="Shortest_chain_to_reach_target_word.cpp" />
+    <ClCompile Include="Shuffle_Array.cpp" />
+    <ClCompile Include="Overlap_Rectangle.cpp" />
+    <ClCompile Include="Evaluation_of_postfix.cpp" />
+    <ClCompile Include="SortNearlySortedArray.cpp" />
+    <ClCompile Include="SRM_144_Div2_550.cpp" />
+    <ClCompile Include="SRM_144_Div2_200.cpp" />
+    <ClCompile Include="SRM_144_Div1_550.cpp" />
+    <ClCompile Include="SRM_144_Div1_300.cpp" />
+    <ClCompile Include="SRM_147_Div1_350.cpp" />
+    <ClCompile Include="String_Permutation.cpp" />
+    <ClCompile Include="The_Next_Palindrome.cpp" />
+    <ClCompile Include="TowerOfHanoi.cpp" />
+    <ClCompile Include="Trade_Apple_Stock.cpp" />
+    <ClCompile Include="Tranform_the_expression.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
