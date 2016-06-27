@@ -1,3 +1,4 @@
+// g++ --std=c++0x -o LinkedList LinkedList.cpp
 #include <iostream>
 #include <vector>
 #include "HelperMethod.h"
@@ -98,8 +99,8 @@ Node_LinkedList* MergeLinkedList(Node_LinkedList* a, Node_LinkedList* b)
     return start;
 }
 
-// int main()
-int LinkedList()
+int main()
+//int LinkedList()
 {
 
     Node_LinkedList a(10, NULL);

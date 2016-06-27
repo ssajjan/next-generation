@@ -1,12 +1,12 @@
-// g++ -o tree.exe  tree.cpp 
+//g++ -g -o tree tree.cpp
 #include <fstream>
 #include <iostream>
-#include <deque>
-#include<queue>
+//#include <deque>
+#include <queue>
 #include <iomanip>
 #include <sstream>
 #include <string>
-#include "binary_tree_pretty_print.h"
+#include "binary_tree.h"
 using namespace std;
 
 void printLevelOrder(BinaryTree *head){
@@ -29,30 +29,23 @@ void printLevelOrder(BinaryTree *head){
 }
 
 int main(){
-  BinaryTree *root = new BinaryTree(30);
-  root->left = new BinaryTree(20);
-  root->right = new BinaryTree(40);
-  root->left->left = new BinaryTree(10);
-  root->left->right = new BinaryTree(25);
-  root->right->left = new BinaryTree(35);
-  root->right->right = new BinaryTree(50);
-  root->left->left->left = new BinaryTree(5);
-  root->left->left->right = new BinaryTree(15);
-  root->left->right->right = new BinaryTree(28);
-  root->right->right->left = new BinaryTree(41);
+	int array[] = {-10,0,10, 20, 30, 50, 70, 86, 89, 90, 100,671};
+
+	BinaryTree *root = sortedArrayToBST(array,0, sizeof(array)/sizeof(int)-1);
 
 	printLevelOrder(root);
 
-  cout << "Tree pretty print with level=1 and indentSpace=0\n\n";
-  // Output to console
-  printPretty(root, 1, 0, cout);
-
-  cout << "\n\nTree pretty print with level=5 and indentSpace=3,\noutput to file \"tree_pretty.txt\".\n\n";
-  // Create a file and output to that file
-  ofstream fout("tree_pretty.txt");
-  // Now print a tree that's more spread out to the file
-  printPretty(root, 5, 0, fout);
+	cout << "\nTree pretty print with level=1 and indentSpace=0\n\n";
+	// Output to console
+	printPretty(root, 1, 0, cout);
+	cout << "\n\nTree pretty print with level=5 and indentSpace=3,\noutput to file \"tree_pretty.txt\".\n\n";
+	// Create a file and output to that file
+	ofstream fout("tree_pretty.txt");
+	// Now print a tree that's more spread out to the file
+	printPretty(root, 5, 0, fout);
+	
+	cout<<"preorder:";
+	preorderTraversal(root);
 
   return 0;
 }
-

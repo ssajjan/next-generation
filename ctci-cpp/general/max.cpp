@@ -1,3 +1,5 @@
+//g++ -o max.exe max.cpp 
+
 #include <iostream>
 #include <string>
 

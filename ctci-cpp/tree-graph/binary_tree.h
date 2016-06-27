@@ -2,7 +2,8 @@
 
 #include <fstream>
 #include <iostream>
-#include <deque>
+//#include <deque>
+#include <queue>
 #include <iomanip>
 #include <sstream>
 #include <string>
@@ -10,34 +11,57 @@
 using namespace std;
 
 struct BinaryTree {
-  BinaryTree *left, *right;
-  int data;
-  BinaryTree(int val) : left(NULL), right(NULL), data(val) { }
+	int data;
+	BinaryTree *left, *right;
+	BinaryTree(int val) : left(NULL), right(NULL), data(val) { }
 };
 
 // Find the maximum height of the binary tree
 int maxHeight(BinaryTree *p) {
-  if (!p) return 0;
-  int leftHeight = maxHeight(p->left);
-  int rightHeight = maxHeight(p->right);
-  return (leftHeight > rightHeight) ? leftHeight + 1: rightHeight + 1;
+	if (!p) return 0;
+	int leftHeight = maxHeight(p->left);
+	int rightHeight = maxHeight(p->right);
+	return (leftHeight > rightHeight) ? leftHeight + 1: rightHeight + 1;
 }
 
 // Convert an integer value to string
+// intTostring ,  integerTostring
 string intToString(int val) {
-  ostringstream ss;
-  ss << val;
-  return ss.str();
+	ostringstream ss;
+	ss << val;
+	return ss.str();
+}
+
+/* A function that constructs Balanced Binary Search Tree from a sorted array */
+BinaryTree* sortedArrayToBST(int arr[],int start, int end){
+	BinaryTree *root;
+
+	if(start > end) return NULL;
+	int mid = (start+end)/2;
+
+	root = new BinaryTree(arr[mid]);
+	root->left = sortedArrayToBST(arr, start, mid-1);
+	root->right = sortedArrayToBST(arr,mid+1,end);
+	
+	return root;
+}
+
+void preorderTraversal(BinaryTree *root){
+	if(root){
+		preorderTraversal(root->left);
+		cout<< root->data<< " ";
+		preorderTraversal(root->right);
+	}
 }
 
 // Print the arm branches (eg, /    \ ) on a line
 void printBranches(int branchLen, int nodeSpaceLen, int startLen, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {
-  deque<BinaryTree*>::const_iterator iter = nodesQueue.begin();
-  for (int i = 0; i < nodesInThisLevel / 2; i++) {  
-    out << ((i == 0) ? setw(startLen-1) : setw(nodeSpaceLen-2)) << "" << ((*iter++) ? "/" : " ");
-    out << setw(2*branchLen+2) << "" << ((*iter++) ? "\\" : " ");
-  }
-  out << endl;
+	deque<BinaryTree*>::const_iterator iter = nodesQueue.begin();
+	for (int i = 0; i < nodesInThisLevel / 2; i++) {  
+		out << ((i == 0) ? setw(startLen-1) : setw(nodeSpaceLen-2)) << "" << ((*iter++) ? "/" : " ");
+		out << setw(2*branchLen+2) << "" << ((*iter++) ? "\\" : " ");
+	}
+	out << endl;
 }
 
 // Print the branches and node (eg, ___10___ )

@@ -1,4 +1,5 @@
 //https://www.interviewcake.com/question/compress-url-list?utm_source=weekly_email
+//g++ --std=c++0x -o Rotation_Point Rotation_Point.cpp
 
 #include <iostream>
 #include <vector>
@@ -37,8 +38,8 @@ int FindRotationPoint(vector<string> dic)
 	return index;
 }
 
-//int main()
-int Rotation_Point()
+int main()
+//int Rotation_Point()
 {
 	vector<string> dic = {
 		"panda",
@@ -56,7 +57,7 @@ int Rotation_Point()
 		"ozone"
 	};
 	int index = FindRotationPoint(dic);
-	printf("%d\n", index);
+	printf("1: %d\n", index);
 
 	vector<string> dic2 = {
 		"asymptote",
@@ -68,7 +69,7 @@ int Rotation_Point()
 		"ozone"
 	};
 	index = FindRotationPoint(dic2);
-	printf("%d\n", index);
+	printf("2: %d\n", index);
 
 	int test;
 	cin >> test;

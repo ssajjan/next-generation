@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BinaryTree	binary_tree_pretty_print.h	/^	BinaryTree(int val) : left(NULL), right(NULL), data(val) { }$/;"	f	struct:BinaryTree
+BinaryTree	binary_tree_pretty_print.h	/^struct BinaryTree {$/;"	s
+Graph	pathBetweenNodes.cpp	/^Graph::Graph(int V)$/;"	f	class:Graph
+Graph	pathBetweenNodes.cpp	/^class Graph$/;"	c	file:
+V	pathBetweenNodes.cpp	/^        int V; \/\/ No. of vertices$/;"	m	class:Graph	file:
+addEdge	pathBetweenNodes.cpp	/^void Graph::addEdge(int v, int w)$/;"	f	class:Graph
+adj	pathBetweenNodes.cpp	/^        list<int> *adj; \/\/ Pointer to an array containing adjacency lists$/;"	m	class:Graph	file:
+data	binary_tree_pretty_print.h	/^	int data;$/;"	m	struct:BinaryTree
+intToString	binary_tree_pretty_print.h	/^string intToString(int val) {$/;"	f
+isReachable	pathBetweenNodes.cpp	/^bool Graph::isReachable(int s, int d)$/;"	f	class:Graph
+left	binary_tree_pretty_print.h	/^	BinaryTree *left, *right;$/;"	m	struct:BinaryTree
+main	pathBetweenNodes.cpp	/^int main()$/;"	f
+main	tree.cpp	/^int main(){$/;"	f
+maxHeight	binary_tree_pretty_print.h	/^int maxHeight(BinaryTree *p) {$/;"	f
+printBranches	binary_tree_pretty_print.h	/^void printBranches(int branchLen, int nodeSpaceLen, int startLen, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printLeaves	binary_tree_pretty_print.h	/^void printLeaves(int indentSpace, int level, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printLevelOrder	tree.cpp	/^void printLevelOrder(BinaryTree *head){$/;"	f
+printNodes	binary_tree_pretty_print.h	/^void printNodes(int branchLen, int nodeSpaceLen, int startLen, int nodesInThisLevel, const deque<BinaryTree*>& nodesQueue, ostream& out) {$/;"	f
+printPretty	binary_tree_pretty_print.h	/^void printPretty(BinaryTree *root, int level, int indentSpace, ostream& out) {$/;"	f
+right	binary_tree_pretty_print.h	/^	BinaryTree *left, *right;$/;"	m	struct:BinaryTree
+sortedArrayToBST	binary_tree_pretty_print.h	/^BinaryTree* sortedArrayToBST(int arr[],int start, int end){$/;"	f
