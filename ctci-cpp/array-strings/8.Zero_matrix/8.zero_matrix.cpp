@@ -1,6 +1,5 @@
-/**
- * Cracking the coding interview 1.8
- * Write a space efficient algorithm, such that if an element in MxN is 0, the entire row and column containing it are 0.
+//g++ -o 8.zero_matrix 8.zero_matrix.cpp 
+/* Write a space efficient algorithm, such that if an element in MxN is 0, the entire row and column containing it are 0.
  *
  * Approach:
  * We can use a boolean matrix of MxN or a bit vector to mark row and columns to be nullified in first iteration, but it wont be space efficient.
@@ -10,6 +9,8 @@
  */
 
 #include <iostream>
+
+using namespace std;
 
 void nullifyRow( int ** matrix, int N, int row ) {
 	for ( int j = 0; j < N; ++j ) {
@@ -84,36 +85,36 @@ void nullifyMatrix( int ** matrix, int M, int N ) {
 void printMatrix( int ** matrix, int M, int N ) {
 	for ( int i = 0; i < M; ++i ) {
 		for ( int j = 0; j < N; ++j ) {
-			std::cout << matrix[i][j] << "  ";
+			cout << matrix[i][j] << "  ";
 		}
-		std::cout << std::endl;
+		cout << std::endl;
 	}
-	std::cout << std::endl;
+	cout << std::endl;
 }
 
 
 int main()
 {
 	int M, N;
-	std::cout << "Enter number of rows:";
-	std::cin >> M;
-	std::cout << "Enter number of cols:";
-	std::cin >> N;
+	cout << "Enter number of rows:";
+	cin >> M;
+	cout << "Enter number of cols:";
+	cin >> N;
 	int ** matrix = new int*[M];
 	for ( int i =0; i < M; ++i ) {
 		matrix[i] = new int[N];
 	}
-	std::cout << "Provide M x N matrix \n";
+	cout << "Provide M x N matrix \n";
 	for ( int i = 0; i < M; ++i ) {
 		for ( int j = 0; j < N; ++j ) {
-			std::cin >> matrix[i][j];
+			cin >> matrix[i][j];
 		}
 	}
 
-	std::cout << "Matrix Before:\n";
+	cout << "Matrix Before:\n";
 	printMatrix(matrix, M, N);
 	nullifyMatrix(matrix, M, N);
-	std::cout << "Matrix After:\n";
+	cout << "Matrix After:\n";
 	printMatrix(matrix, M, N);
 	return 0;
 }

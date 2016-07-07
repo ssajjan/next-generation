@@ -1,3 +1,4 @@
+//g++ -o 9.string_rotation 9.string_rotation.cpp
 /**
  * Cracking the coding interview 1-9
  * You have a function "isSubstring" which checks whether a string is substring of another.
@@ -14,14 +15,16 @@
 #include <iostream>
 #include <string>
 
-bool isRotation( std::string s1, std::string s2 ) {
+using namespace std;
+
+bool isRotation(string s1, string s2 ) {
 	size_t len1 = s1.length();
 	size_t len2 = s2.length();
 	if ( len1 == 0 || len1 != len2 ) {
 		return false;
 	}
-	std::string concatS1 = s1 + s1;
-	if ( concatS1.find(s2) != std::string::npos ) {
+	string concatS1 = s1 + s1;
+	if ( concatS1.find(s2) != string::npos ) {//npos mean non-position and its value is set to -1.
 		return true;
 	} else {
 		return false;
@@ -29,15 +32,15 @@ bool isRotation( std::string s1, std::string s2 ) {
 }
 
 int main() {
-	std::string s1, s2;
-	std::cout << "Enter string 1 : ";
-	std::cin >> s1;
-	std::cout << "Enter string 2 : ";
-	std::cin >> s2;
+	string s1, s2;
+	cout << "Enter string 1 : ";
+	cin >> s1;
+	cout << "\nEnter string 2 : ";
+	cin >> s2;
 	if ( isRotation(s1, s2) ) {
-		std::cout << "Yes! " << s2 << " is rotation of " << s1 << std::endl;
+		cout << "Yes! " << s2 << " is rotation of " << s1 << "\n";
 	} else {
-		std::cout << "No! " << s2 << " is not a rotation of " << s1 << std::endl;
+		cout << "No! " << s2 << " is not a rotation of " << s1 << endl;
 	}
 	return 0;
 }
