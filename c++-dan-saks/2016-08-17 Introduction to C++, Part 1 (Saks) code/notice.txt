@@ -1,0 +1,55 @@
+This notice accompanies the source code for Dan Saks's course entitled:
+
+"Introduction to C++ and Object-Oriented Programming"
+
+It is Copyright (c) 2016 by Dan Saks and distributed with his permission
+by:
+
+Saks & Associates
+393 Leander Dr.
+Springfield, OH 45504-4906 USA
++1-937-324-3601
+dan@dansaks.com
+
+Those who have taken the course or licensed the materials may freely use
+and modify this software for self-study, provided the copyright notice
+remains intact in each source file.
+
+Dan Saks reserves all other rights to this source code.
+
+If you wish to use this software for other purposes, please contact Saks &
+Associates for permission.
+
+----
+
+Most folder names are in the form CC-XX:
+
+-- CC is the number of a chapter.
+
+-- XX is the number of the example in that chapter.
+
+These folders containing coding examples from the notes.
+
+Other folders correspond to programming exercises in the notes.
+
+When solving an exercise, you rarely need to start from scratch. Rather,
+you start the exercise by using the code from the immediately preceeding
+folder.
+
+Some exercises have more than one folder associated with it. If the folder
+name ends with the letter 'p', you use the code in that folder to start
+the exercise. If the folder has the letter 's' in it, it contains the
+exercise solution. Some exercise have more than one solution, indicated by
+.1, .2, etc., at the end of the folder name.
+
+Each folders contain make files to build the program as a Windows console
+application with these different compilers:
+
+gcw.mk - TDM-GCC (as a C compiler) using mingw32-make
+
+gpw.mk - TDM-GCC (as a C++ compiler) using mingw32-make
+
+vcw.mk - Microsoft Visual 2015 (as a C compiler) using nmake
+
+vpw.mk - Microsoft Visual 2015 (as a C++ compiler) using nmake
+

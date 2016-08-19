@@ -1,0 +1,10 @@
+xr - a cross-reference generator
+
+Copyright (c) 2016 by Dan Saks. Do not distribute any of the files in this
+folder without the file notice.txt.
+
+This version uses the output components from <iostream> in place of the
+output components from <cstdio>.
+
+It still uses <cstdio> for input.
+
